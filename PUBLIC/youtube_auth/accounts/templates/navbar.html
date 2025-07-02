@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SITE</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<nav class="navbar navbar-expand-lg bg-dark " >
+     <div class="container-fluid d-flex justify-content-between align-items-center">
+         
+         
+            
+            <ul class="navbar-nav d-flex flex-row gap-3"> 
+                <li class="nav-item ">
+                     <a class="nav-link active text-white fs-4" href="#"><b>Home</b></a>
+                </li>
+                
+            </ul> 
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end"> 
+                <form class="logout" action= "{% url 'logout' %}" method='post'>
+                    {%csrf_token%}
+                    <button class="btn btn-outline-danger logout-button " aria-label="USER-LOGOUT" title="user-logout">
+                        SIGN OUT
+                    </button> 
+                </form>
+                
+            </div> 
+        
+    </div> 
+</nav>
+{% block body%}{% endblock %}
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
